@@ -24,7 +24,7 @@ public class Solution {
    */
   public static int knightBFS_find_minMoves_fromStart_toGoal(int row_start, int column_start, int row_goal, int column_goal) {
 
-    // To be consistent with a board designation from 1x1 to 8x8, rows and columns with index=0 are not applied,
+    // To be consistent with a board designation from 1x1 to 8x8, rows and columns with index=0 are not applied.
     boolean[][] visited = new boolean[9][9];
     visited[row_start][column_start] = true;
 
