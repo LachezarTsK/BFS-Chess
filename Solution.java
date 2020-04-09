@@ -5,7 +5,7 @@ import java.util.LinkedList;
 public class Solution {
 
   public static void main(String[] args) {
-    // knightBFS
+    
     Scanner scanner = new Scanner(System.in);
     int row_start = scanner.nextInt();
     int column_start = scanner.nextInt();
@@ -19,15 +19,14 @@ public class Solution {
   }
 
   /**
-   * Applying Breath First Search to find the minimum moves of the knight from start to goal.
+   * Applying Breadth First Search to find the minimum moves of the knight from start to goal.
    *
    * @return An integer, representing the min moves.
    */
   public static int knightBFS_find_minMoves_fromStart_toGoal(
       int row_start, int column_start, int row_goal, int column_goal) {
 
-    // To be consistent with a board designation from 1x1 to 8x8, rows and columns with index=0 are
-    // not applied,
+    // To be consistent with a board designation from 1x1 to 8x8, rows and columns with index=0 are not applied,
     boolean[][] visited = new boolean[9][9];
     visited[row_start][column_start] = true;
 
