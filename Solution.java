@@ -12,8 +12,7 @@ public class Solution {
     int row_goal = scanner.nextInt();
     int column_goal = scanner.nextInt();
 
-    int knight_minMoves_fromStart_toGoal =
-        knightBFS_find_minMoves_fromStart_toGoal(row_start, column_start, row_goal, column_goal);
+    int knight_minMoves_fromStart_toGoal = knightBFS_find_minMoves_fromStart_toGoal(row_start, column_start, row_goal, column_goal);
 
     System.out.println(knight_minMoves_fromStart_toGoal);
   }
@@ -23,8 +22,7 @@ public class Solution {
    *
    * @return An integer, representing the min moves.
    */
-  public static int knightBFS_find_minMoves_fromStart_toGoal(
-      int row_start, int column_start, int row_goal, int column_goal) {
+  public static int knightBFS_find_minMoves_fromStart_toGoal(int row_start, int column_start, int row_goal, int column_goal) {
 
     // To be consistent with a board designation from 1x1 to 8x8, rows and columns with index=0 are not applied,
     boolean[][] visited = new boolean[9][9];
@@ -48,8 +46,7 @@ public class Solution {
     return minMoves;
   }
 
-  private static void add_nextMoves_toQueue(
-      Point current, LinkedList<Point> queue_moves, boolean[][] visited) {
+  private static void add_nextMoves_toQueue(Point current, LinkedList<Point> queue_moves, boolean[][] visited) {
 
     // All possible moves for a knight from a given position, as per the rules of chess.
     int[][] knightMoves = new int[][] {{1, 1, -1, -1, 2, 2, -2, -2}, {2, -2, 2, -2, 1, -1, 1, -1}};
